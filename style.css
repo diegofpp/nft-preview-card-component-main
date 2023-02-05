@@ -1,0 +1,195 @@
+:root{
+
+    /* ### Primary */
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    
+    /* ### Neutral */
+    
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /* ### Typography */ 
+    --fw-regular: 300;
+    --fw-medium: 400;
+    --fw-semibold: 600;    
+
+    --ff-primary: 'Outfit', sans-serif;
+   
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+body {
+    background-color: var(--very-dark-blue-card-bg);
+    display: grid;
+    place-content: center;
+    
+
+}
+@media (min-width: 697px) {
+    .card {
+        max-width: 375px;
+    }
+  }
+
+.card {
+    display: grid;
+    margin: 40px 12px 40px 12px;
+    border-radius: 10px;
+    background-color: var(--very-dark-blue-line);
+}
+
+.card__img {
+
+    padding: 2rem 2rem 0rem 2rem;
+    overflow: hidden;
+    place-content: center;
+}
+
+.card__content {
+
+    display: grid;
+    /* top | right | bottom | left */
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+}
+
+.card__title{
+    
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-semibold);
+    font-size: 1.5rem;
+    color: var(--white);
+
+}
+
+.card__description{
+    
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--soft-blue);
+    margin-top: 10px;
+}
+
+.card__price{
+    
+    margin-right: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.card__price img{
+
+    height: 1.3rem;
+    margin-right: 0.3rem;
+}
+
+
+.card__price--eth {
+
+    display: flex;
+    align-items: center;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-semibold);
+    font-size: 1rem;
+    color: var(--cyan);
+    margin-top: 10px;
+    
+
+}
+
+.card__price--time {
+
+    display: flex;
+    align-items: center;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--soft-blue);
+    margin-top: 10px;
+
+}
+.card__creator {
+    position: relative;
+    margin-top: 10px;
+}
+
+.card__creator--text{
+
+    display: flex;
+    align-items: center;
+    float: left;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--soft-blue);
+    
+    
+}
+
+.card__creator--text img{
+    border: 1px solid var(--white);
+    float: left;
+    border-radius: 50%;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.card__creator--text span{
+    margin-left: 0.2rem;
+    color: var(--white);
+}
+
